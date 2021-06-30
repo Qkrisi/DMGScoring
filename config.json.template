@@ -1,0 +1,7 @@
+{
+	"Host":"localhost",
+	"Port":5000,
+	"TableEndpoint":"/table",
+	"ScoreURL":"https://example.com",
+	"RawURL":"https://example2.com"
+}

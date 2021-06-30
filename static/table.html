@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style>
+		th, td {
+			padding: 8px 16px;
+		  border: 1px solid black;
+		}
+		.color1 {
+			background-color: gray;
+		}
+		.color2 {
+			background-color: lime;
+		}
+		.color3 {
+			background-color: blanchedalmond;
+		}
+		.color4 {
+			background-color: lightskyblue;
+		}
+		.color5 {
+			background-color: mediumorchid;
+		}
+		.color6 {
+			background-color: lightcoral;
+		}
+		</style>
+	</head>
+	<body>
+		<table class="color1">
+			<tr>
+				<th align="left">
+					<b>
+						{{MissionHead}}
+					</b>
+				</th>
+			</tr>
+		</table>
+		<div>
+		<table>
+			<thead>
+				<tr>
+					<th class="color2"><b><u>Module Count</b></u></th>
+					<th class="color3"><b><u>Module Pool</b></u></th>
+					<th class="color4"><b><u>Average Points</b></u></th>
+					<th class="color5"><b><u>Total Points</b></u></th>
+					<th class="color6"><b><u>Estimated Bomb Time</b></u></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr class="color1">
+					<th>TOTAL</th>
+					<th>{{TotalData}}</th>
+					<th></th>
+					<th>{{TotalPoints}}</th>
+					<th>{{TotalTime}}</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				{{Pools}}
+			</tbody>
+		</table>
+		</div>
+	</body>
+</html>
