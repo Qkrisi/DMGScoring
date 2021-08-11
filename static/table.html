@@ -23,17 +23,37 @@
 		.color6 {
 			background-color: lightcoral;
 		}
+		
+		tbody {
+    max-height: 575px;
+    overflow-y: scroll;
+    display: block;
+}
+
+table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table thead, table tfoot {
+    display: table;
+    width: calc(100% - 1em);
+    table-layout: fixed;
+}
 		</style>
 	</head>
 	<body>
 		<table class="color1">
-			<tr>
-				<th align="left">
-					<b>
-						{{MissionHead}}
-					</b>
-				</th>
-			</tr>
+			<thead>
+				<tr>
+					<th align="left">
+						<b>
+							{{MissionHead}}
+						</b>
+					</th>
+				</tr>
+			</thead>
 		</table>
 		<div>
 		<table>
@@ -46,6 +66,9 @@
 					<th class="color6"><b><u>Estimated Bomb Time</b></u></th>
 				</tr>
 			</thead>
+			<tbody>
+				{{Pools}}
+			</tbody>
 			<tfoot>
 				<tr class="color1">
 					<th>TOTAL</th>
@@ -55,9 +78,6 @@
 					<th>{{TotalTime}}</th>
 				</tr>
 			</tfoot>
-			<tbody>
-				{{Pools}}
-			</tbody>
 		</table>
 		</div>
 	</body>
